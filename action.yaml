@@ -1,0 +1,8 @@
+name: Create RIO package
+description: 'creates a package on the platform and saves package details in file'
+runs:
+  using: composite
+  steps:
+    - id: create-package
+      run: .github/scripts/create_package.sh -f .github/scripts/build_details.yaml .github/scripts/flask_helloworld/package.yaml
+      shell: bash
