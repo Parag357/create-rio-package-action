@@ -4,5 +4,5 @@ runs:
   using: composite
   steps:
     - id: create-package
-      run: .github/scripts/create_package/create_package.sh -f .github/scripts/app_config/details/build_details.yaml .github/scripts/app_config/package.yaml
+      run: python .github/scripts/create_package.py .github/app_config/details/build_details.yaml .github/app_config/package.yaml
       shell: bash
